@@ -47,6 +47,43 @@ class MoveComponent : GKAgent2D, GKAgentDelegate {
         spriteComponent.node.position = CGPoint(position)
     }
     
+    func closestMoveComponent(for team: Team) -> GKAgent2D? {
+        
+        var closestMoveComponent: MoveComponent? = nil
+        var closestDistance = CGFloat(0)
+        
+        let enemyMoveComponents = entityManager.moveComponents(for: team)
+        for enemyMoveComponent in enemyMoveComponents {
+            let distance = (CGPoint(enemyMoveComponent.position) - CGPoint(position)).length()
+            if closestMoveComponent == nil || distance < closestDistance {
+                closestMoveComponent = enemyMoveComponent
+                closestDistance = distance
+            }
+        }
+        return closestMoveComponent
+    }
+  
+    
+    override func update(deltaTime seconds: TimeInterval) {
+        super.update(deltaTime: seconds)
+        
+        // 1
+        guard let entity = entity,
+            let teamComponent = entity.component(ofType: TeamComponent.self) else {
+                return
+        }
+        
+        // 2
+        guard let enemyMoveComponent = closestMoveComponent(for: teamComponent.team.oppositeTeam()) else {
+            return
+        }
+        
+        // 3
+        let alliedMoveComponents = entityManager.moveComponents(for: teamComponent.team)
+        
+        // 4
+        behavior = MoveBehavior(targetSpeed: maxSpeed, seek: enemyMoveComponent, avoid: alliedMoveComponents)
+    }    
     
     
 }
