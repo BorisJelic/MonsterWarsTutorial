@@ -12,7 +12,7 @@ import GameplayKit
 
 class CastleComponent: GKComponent {
     
-    var coins = 0
+    var coins = 100
     var lastCoinDrop = TimeInterval(0)
     
     override init() {
@@ -30,7 +30,7 @@ class CastleComponent: GKComponent {
         let coinPerInterval = 10
         if (CACurrentMediaTime() - lastCoinDrop > coinDropInterval) {
             lastCoinDrop = CACurrentMediaTime()
-            coins + coinPerInterval
+            coins += coinPerInterval
         }
     }
     

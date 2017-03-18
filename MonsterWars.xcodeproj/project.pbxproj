@@ -34,6 +34,9 @@
 		A2BABF7F1E7D326B00AE3931 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BABF7E1E7D326B00AE3931 /* EntityManager.swift */; };
 		A2BABF811E7D37BD00AE3931 /* TeamComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BABF801E7D37BD00AE3931 /* TeamComponent.swift */; };
 		A2BABF831E7D397700AE3931 /* CastleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BABF821E7D397700AE3931 /* CastleComponent.swift */; };
+		A2BABF851E7D453F00AE3931 /* Quirk.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BABF841E7D453F00AE3931 /* Quirk.swift */; };
+		A2BABF891E7D5BED00AE3931 /* MoveBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BABF881E7D5BED00AE3931 /* MoveBehaviour.swift */; };
+		A2BABF8B1E7D5D7D00AE3931 /* MoveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BABF8A1E7D5D7D00AE3931 /* MoveComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +69,9 @@
 		A2BABF7E1E7D326B00AE3931 /* EntityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 		A2BABF801E7D37BD00AE3931 /* TeamComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamComponent.swift; sourceTree = "<group>"; };
 		A2BABF821E7D397700AE3931 /* CastleComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastleComponent.swift; sourceTree = "<group>"; };
+		A2BABF841E7D453F00AE3931 /* Quirk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quirk.swift; sourceTree = "<group>"; };
+		A2BABF881E7D5BED00AE3931 /* MoveBehaviour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveBehaviour.swift; sourceTree = "<group>"; };
+		A2BABF8A1E7D5D7D00AE3931 /* MoveComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,8 @@
 				A2BABF791E7D2EA200AE3931 /* SpriteComponent.swift */,
 				A2BABF801E7D37BD00AE3931 /* TeamComponent.swift */,
 				A2BABF821E7D397700AE3931 /* CastleComponent.swift */,
+				A2BABF881E7D5BED00AE3931 /* MoveBehaviour.swift */,
+				A2BABF8A1E7D5D7D00AE3931 /* MoveComponent.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -158,6 +166,7 @@
 			children = (
 				A2BABF7C1E7D2FE300AE3931 /* Castle.swift */,
 				A2BABF7E1E7D326B00AE3931 /* EntityManager.swift */,
+				A2BABF841E7D453F00AE3931 /* Quirk.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -253,9 +262,12 @@
 				352F995F1BE91323001D1D3E /* GameScene.swift in Sources */,
 				A2BABF7A1E7D2EA200AE3931 /* SpriteComponent.swift in Sources */,
 				352F998C1BE919C5001D1D3E /* ButtonNode.swift in Sources */,
+				A2BABF891E7D5BED00AE3931 /* MoveBehaviour.swift in Sources */,
 				352F999A1BE928AF001D1D3E /* MyUtils.swift in Sources */,
 				A2BABF831E7D397700AE3931 /* CastleComponent.swift in Sources */,
+				A2BABF851E7D453F00AE3931 /* Quirk.swift in Sources */,
 				352F99611BE91323001D1D3E /* GameViewController.swift in Sources */,
+				A2BABF8B1E7D5D7D00AE3931 /* MoveComponent.swift in Sources */,
 				A2BABF7D1E7D2FE300AE3931 /* Castle.swift in Sources */,
 				352F99B31BE97B48001D1D3E /* Constants.swift in Sources */,
 				352F995B1BE91323001D1D3E /* AppDelegate.swift in Sources */,
